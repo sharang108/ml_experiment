@@ -28,7 +28,8 @@ def load_dataset(file):
 def activation(fun, var):
 	val = 0.0
 	if fun == 'tanh':
-		val = np.exp(2 * var) - 1 / np.exp(2 * var) + 1
+		val = np.tanh(var)
+		# val = np.exp(2 * var) - 1 / np.exp(2 * var) + 1
 	
 	elif fun == 'sigmoid':
 		val = 1/ (1 + np.exp(-var))
